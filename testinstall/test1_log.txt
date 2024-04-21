@@ -1,0 +1,65 @@
+
+Install off debian 12 Bookworm on Opi Zero 2W for BareBoatNecessities
+
+login as orangepi  password: orangepi
+
+sudo adduser wiktom
+
+orangepi@orangepizero2w:~$ sudo adduser wiktom
+Adding user `wiktom' ...
+Adding new group `wiktom' (1001) ...
+Adding new user `wiktom' (1001) with group `wiktom (1001)' ...
+Creating home directory `/home/wiktom' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for wiktom
+Enter the new value, or press ENTER for the default
+        Full Name []: Bektorkhan
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n]
+Adding new user `wiktom' to supplemental / extra groups `users' ...
+Adding user `wiktom' to group `users' ...
+orangepi@orangepizero2w:~$ groups
+orangepi tty disk dialout sudo audio video plugdev games users input netdev bluetooth docker systemd-journal
+orangepi@orangepizero2w:~$ sudo usermod -a -G tty wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G disk wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G dialout wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G sudo wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G audio wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G video wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G plugdev wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G games wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G users wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G input wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G netdev wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G bluetooth wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G docker wiktom
+orangepi@orangepizero2w:~$ sudo usermod -a -G systemd-journal wiktom
+
+change root password:
+wiktom@orangepizero2w:~$ sudo passwd
+wiktom@orangepizero2w:~$ sudo apt update
+wiktom@orangepizero2w:~$ sudo apt upgrade 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+wiktom@orangepizero2w:~$ 
+
+
+
