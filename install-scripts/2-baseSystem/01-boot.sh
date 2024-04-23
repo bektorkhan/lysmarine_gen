@@ -33,6 +33,10 @@ fi
 if [ -f /boot/armbianEnv.txt ]; then
 	echo "console=serial" >> /boot/armbianEnv.txt
 fi
+## OrangePi
+if [ -f /boot/orangepiEnv.txt ]; then
+	echo "console=serial" >> /boot/orangepiEnv.txt
+fi
 
 # Debian
 if [ -f /etc/default/grub ] ; then
@@ -54,8 +58,8 @@ if [ -f /etc/issue ]; then
 fi
 
 # Raspbian enable this to intercept keystroke during the boot process, (for ondemand cup freq management.) We don't want to set it that way.
-systemctl disable triggerhappy.service
-systemctl disable triggerhappy.socket
+# systemctl disable triggerhappy.service
+# systemctl disable triggerhappy.socket
 
 install -v -m0644 "$FILE_FOLDER"/plymouth-start.service "/etc/systemd/system/"
 
@@ -73,7 +77,7 @@ EOF'
 #EOF'
 
 # Swap
-sed -i 's/CONF_SWAPSIZE=100$/CONF_SWAPSIZE=2048/' /etc/dphys-swapfile
+# sed -i 's/CONF_SWAPSIZE=100$/CONF_SWAPSIZE=2048/' /etc/dphys-swapfile
 
 
 #systemctl disable systemd-firstboot.service

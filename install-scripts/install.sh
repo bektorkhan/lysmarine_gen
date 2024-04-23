@@ -44,13 +44,14 @@ for argument in $argumentList; do # access each element of array
 
   set +f
   for scriptLocation in ./$stage*/$script*.sh; do
-    if [ -f "$scriptLocation" ]; then
+    if [ -x "$scriptLocation" ]; then
       echo "From request $argument "
       echo "Running stage $stage -> $script ( $scriptLocation )"
       export FILE_FOLDER=${scriptLocation%/*}/files/
-      chmod +x "$scriptLocation"
+      # chmod +x "$scriptLocation"
       $scriptLocation
       [[ ${PIPESTATUS[0]} -ne 0 ]] && exit 255
+      chmod -x "$scriptLocation"
     fi
   done
 done
